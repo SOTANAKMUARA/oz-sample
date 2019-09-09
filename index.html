@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>オズ・ミュージック</title>
+  <link rel="stylesheet" href="css/index.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+  <header>
+  <div class="icon-hamburger"><span></span></div>
+    <nav class="menu-container">
+      <ul class="menu">
+        <li class="menu-item"><a href="#">Home</a></li>
+        <li class="menu-item"><a href="#">About us</a></li>
+        <li class="menu-item"><a href="#">Event</a></li>
+        <li class="menu-item"><a href="#">Movie</a></li>
+        <li class="menu-item"><a href="#">Link</a></li>
+        <li class="menu-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main">
+    <div class="title">
+      <p>オズ・ミュージック</p>
+    </div>
+    <div class="facebook">
+      <a href="https://www.facebook.com/ozmusicjapan"><img src="img/facebook.jpg" width="30px" height="30px"></a>
+    </div>
+    <div class="main-img">
+      <img src="img/main-img.jpg" width="100%" height="auto">
+    </div>  
+
+    <div class="contents">
+    <div class="up line"></div>
+
+
+    <div class="message">
+      <p class="new">〜〜〜〜New!!〜〜〜〜</p>
+      <p class="up-1"><a href="#">Eventを更新しました!</a></p>
+      <p class="up-2"><a href="#">〇〇を更新しました!</a></p>
+    </div>
+    
+
+    <div class="down line"></div>
+
+  </div>
+    <img id="mypic" src="img/1.jpg" width="100%" height="auto">
+            <script>
+            var pics_src = new Array("img/1.jpg","img/2.jpg","img/3.jpg");
+            var num = -1;
+ 
+            slideshow_timer();
+ 
+            function slideshow_timer(){
+                if (num == 2){
+                    num = 0;
+                } 
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+                setTimeout("slideshow_timer()",2500); 
+            }
+            </script>
+    
+
+  </div>
+  
+
+  <script type="text/javascript"><!--
+    function myEnter(){
+    myPassWord=prompt("パスワードを入力してください","");
+      if ( myPassWord == "2019kyoto" ){
+        location.href = "https://oz-kyoto.netlify.com/";
+      }else{
+        alert( "パスワードが違います" );
+      }
+    }
+// --></script>
+
+<form>
+<input type="button" value="京都" onclick="myEnter()">
+</form>
+
+  <footer>
+    <div class="footer">
+      <p>COPYRIGHT&#169; Ozmusic ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer> 
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
